@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'fourth_task/menu.html'%}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block pagename %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block content %}
+        <ul>
+        {% for i in chapter %}
+            {% if i == 'Глава ожидается ' %}
+                <li>{{ i }}</li>
+            {% else %}
+                <li>{{ i }} <button>{{ button }}</button> </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    {% endblock %}
+
+</body>
+</html>
