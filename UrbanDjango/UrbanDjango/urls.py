@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from task2.views import class_django, func_django
-from task4.views import main_page, table_of_contents, donat
+from task5.views import sign_up_by_django, sign_up_by_html
 
 #На красное подчёркивание пути не обращать внимания!!! Оно работает!!!
 
@@ -25,7 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('class/', class_django),
     path('func/', func_django),
-    path('', main_page),
-    path('content/', table_of_contents),
-    path('donat/', donat)
+    # path('main/', main_page),
+    # path('content/', table_of_contents),
+    # path('donat/', donat),
+    path('', sign_up_by_html),
+    path('django_sign_up/', sign_up_by_django)
 ]
